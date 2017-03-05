@@ -179,9 +179,9 @@
         NSString *urlString = [parts componentsJoinedByString: @"?"];
         
         [self.imgPortada sd_setImageWithURL:[NSURL URLWithString:urlString]
-                           placeholderImage:[UIImage imageNamed:@"placeholder"]];
+                           placeholderImage:[UIImage imageNamed:@"default_img"]];
     }else{
-        self.imgPortada.image = [UIImage imageNamed:@"placeholder"];
+        self.imgPortada.image = [UIImage imageNamed:@"default_img"];
     }
     
 }
