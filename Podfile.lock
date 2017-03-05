@@ -1,0 +1,24 @@
+PODS:
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - NSString-HTML (0.0.1)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - NSString-HTML
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  NSString-HTML: 0dc0ae9d430d20a96dda961a346fa842fffa8c1f
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+
+PODFILE CHECKSUM: fe295b6ffd0c44ec5f40d3e9d333ae703ff1fa10
+
+COCOAPODS: 1.1.1
