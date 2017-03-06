@@ -125,10 +125,10 @@
                         
                         [places setPlaceId:[[results objectAtIndex:o] objectForKey:@"place_id"]];
                         
-                        NSDictionary *photos = [[results objectAtIndex:o] objectForKey:@"photos"];
+                        NSArray *photos = [[results objectAtIndex:o] objectForKey:@"photos"];
                         
                         if (photos) {
-                            [places setPhotoRef:[photos objectForKey:@"photo_reference"]];
+                            [places setPhotoRef:[[photos objectAtIndex:0] objectForKey:@"photo_reference"]];
                         }
                         
                         [places setNombreLugar:[[results objectAtIndex:o] objectForKey:@"name"]];
@@ -166,7 +166,7 @@
     str = [str stringByAppendingString:lon];
     NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:
                             str, @"location",
-                            @"500", @"radius",
+                            @"distance", @"rankby",
                             GOOGLE_GEOPLACES, @"key",
                             self.locali, @"types",
                             nil];
