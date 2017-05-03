@@ -22,5 +22,6 @@ typedef void (^PlacesCallback) (NSMutableArray *lugares, NSError *error);
 @property(nonatomic, strong) UIImage* iconLugar;
 @property(nonatomic, strong) NSString* latLugar;
 @property(nonatomic, strong) NSString* lonLugar;
+@property(nonatomic, strong) NSNumber* rating;
 
 @end

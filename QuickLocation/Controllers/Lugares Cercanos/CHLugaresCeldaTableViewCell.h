@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *txtTituloCell;
 @property (weak, nonatomic) IBOutlet UILabel *txtSubCell;
 @property (weak, nonatomic) IBOutlet UIImageView *imgCell;
+@property (weak, nonatomic) IBOutlet UILabel *txtRating;
 
 @end

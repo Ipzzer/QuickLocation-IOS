@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="reO-iS-o6M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="reO-iS-o6M">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -212,7 +212,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="reO-iS-o6M" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aaM-CU-d4m">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aaM-CU-d4m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -245,7 +245,7 @@
                                         <rect key="frame" x="0.0" y="22" width="383" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OcD-v1-hrj" id="1bG-ok-LFk">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzG-bf-RYi">
@@ -281,9 +281,36 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfK-r1-N0f">
+                                                    <rect key="frame" x="8" y="4" width="25" height="25"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6go-mz-Pym">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.99010807275772095" green="0.7477983832359314" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="6go-mz-Pym" firstAttribute="leading" secondItem="vfK-r1-N0f" secondAttribute="leading" id="4as-4a-wus"/>
+                                                        <constraint firstAttribute="bottom" secondItem="6go-mz-Pym" secondAttribute="bottom" id="5jI-ec-9dh"/>
+                                                        <constraint firstAttribute="width" constant="25" id="CQL-kN-wco"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6go-mz-Pym" secondAttribute="trailing" id="Leu-tj-gvO"/>
+                                                        <constraint firstItem="6go-mz-Pym" firstAttribute="top" secondItem="vfK-r1-N0f" secondAttribute="top" id="WgF-9g-kHL"/>
+                                                        <constraint firstAttribute="height" constant="25" id="ZYb-SM-NZn"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderCorner">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="7Rk-k8-a06" secondAttribute="trailing" constant="18" id="4Ap-t0-QH3"/>
+                                                <constraint firstItem="vfK-r1-N0f" firstAttribute="leading" secondItem="1bG-ok-LFk" secondAttribute="leading" constant="8" id="5M0-jB-W4K"/>
+                                                <constraint firstItem="vfK-r1-N0f" firstAttribute="top" secondItem="1bG-ok-LFk" secondAttribute="top" constant="4" id="BXO-Pr-DiO"/>
                                                 <constraint firstItem="7Rk-k8-a06" firstAttribute="top" secondItem="OzG-bf-RYi" secondAttribute="bottom" id="F6u-92-88h"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="OzG-bf-RYi" secondAttribute="trailing" constant="18" id="Txb-A8-Aa8"/>
                                                 <constraint firstItem="OzG-bf-RYi" firstAttribute="leading" secondItem="HWF-5G-HNN" secondAttribute="trailing" constant="14" id="UbG-f2-Mbq"/>
@@ -295,6 +322,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imgCell" destination="HWF-5G-HNN" id="IBj-47-aYW"/>
+                                            <outlet property="txtRating" destination="6go-mz-Pym" id="29L-NU-tL1"/>
                                             <outlet property="txtSubCell" destination="7Rk-k8-a06" id="b1U-gZ-KiZ"/>
                                             <outlet property="txtTituloCell" destination="OzG-bf-RYi" id="TQg-3r-lbC"/>
                                         </connections>

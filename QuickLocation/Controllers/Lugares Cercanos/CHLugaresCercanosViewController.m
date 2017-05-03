@@ -41,11 +41,57 @@
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    
+    UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"a_sorting-50"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(sortAscending)forControlEvents:UIControlEventTouchUpInside];
+    [button setFrame:CGRectMake(0, 0, 30, 30)];
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    self.navigationItem.rightBarButtonItem = barButton;
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+
+- (void)sortAscending
+{
+    NSArray *sortedArray = [self.tableData sortedArrayUsingComparator: ^(id obj1, id obj2) {
+        
+        /*if ([obj1 rating] == 0 && [obj2 rating] == 0)
+        {
+            return (NSComparisonResult)NSOrderedSame;
+        }
+        if ([obj1 rating] == 0)
+        {
+            return (NSComparisonResult)NSOrderedDescending;
+        }
+        if ([obj2 rating] == 0)
+        {
+            return (NSComparisonResult)NSOrderedAscending;
+        }
+        
+        if ([obj1 rating] > [obj2 rating])
+        {
+            return (NSComparisonResult)NSOrderedDescending;
+        }*/
+        
+        if ([obj1 rating] < [obj2 rating])
+        {
+            return (NSComparisonResult)NSOrderedAscending;
+        }
+        
+        return (NSComparisonResult)NSOrderedSame;
+    }];
+    
+    //NSLog(@"VALUE: %@", [sortedArray description]);
+}
+
 
 - (id)initWithLatitud:(NSString *) lat
              Longitud:(NSString *) lon
@@ -92,6 +138,9 @@
     cell.txtSubCell.font       = [UIFont fontWithName:@"Roboto-Regular" size:13];
     cell.txtSubCell.text       = [[self.tableData objectAtIndex:indexPath.row] vicinityLugar];
     cell.imgCell.image         =[[self.tableData objectAtIndex:indexPath.row] iconLugar];
+    
+    
+    cell.txtRating.text        = [NSString stringWithFormat:@"%.1f", [[[self.tableData objectAtIndex:indexPath.row] rating] floatValue]];
     return cell;
 }
 
@@ -125,10 +174,16 @@
                         
                         [places setPlaceId:[[results objectAtIndex:o] objectForKey:@"place_id"]];
                         
-                        NSDictionary *photos = [[results objectAtIndex:o] objectForKey:@"photos"];
+                        NSArray *photos = [[results objectAtIndex:o] objectForKey:@"photos"];
                         
                         if (photos) {
-                            [places setPhotoRef:[photos objectForKey:@"photo_reference"]];
+                            [places setPhotoRef:[[photos objectAtIndex:0] objectForKey:@"photo_reference"]];
+                        }
+                        
+                        if ([[results objectAtIndex:o] objectForKey:@"rating"]) {
+                            [places setRating: [NSNumber numberWithFloat:[[[results objectAtIndex:o] objectForKey:@"rating"] floatValue]]];
+                        }else{
+                            [places setRating:[NSNumber numberWithFloat:0.f]];
                         }
                         
                         [places setNombreLugar:[[results objectAtIndex:o] objectForKey:@"name"]];
