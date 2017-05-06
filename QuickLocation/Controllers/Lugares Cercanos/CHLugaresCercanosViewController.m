@@ -14,7 +14,9 @@
 #import "Utils.h"
 #import "QLPlaceDetailTableViewController.h"
 
-@interface CHLugaresCercanosViewController ()
+@interface CHLugaresCercanosViewController (){
+    UIButton *button;
+}
 
 @end
 
@@ -43,9 +45,8 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
     
-    UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"a_sorting-50"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(sortAscending)forControlEvents:UIControlEventTouchUpInside];
+    button =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"d_sorting-50"] forState:UIControlStateNormal];
     [button setFrame:CGRectMake(0, 0, 30, 30)];
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     
@@ -59,37 +60,30 @@
 }
 
 
-- (void)sortAscending
-{
-    NSArray *sortedArray = [self.tableData sortedArrayUsingComparator: ^(id obj1, id obj2) {
-        
-        /*if ([obj1 rating] == 0 && [obj2 rating] == 0)
-        {
-            return (NSComparisonResult)NSOrderedSame;
-        }
-        if ([obj1 rating] == 0)
-        {
-            return (NSComparisonResult)NSOrderedDescending;
-        }
-        if ([obj2 rating] == 0)
-        {
-            return (NSComparisonResult)NSOrderedAscending;
-        }
-        
-        if ([obj1 rating] > [obj2 rating])
-        {
-            return (NSComparisonResult)NSOrderedDescending;
-        }*/
-        
-        if ([obj1 rating] < [obj2 rating])
-        {
-            return (NSComparisonResult)NSOrderedAscending;
-        }
-        
-        return (NSComparisonResult)NSOrderedSame;
+- (void) sortAscending{
+    
+    NSArray* asc = [self.tableData sortedArrayUsingComparator:^NSComparisonResult(CHPlaces* n1, CHPlaces* n2) {
+        return [[n1 rating] compare:[n2 rating]];
     }];
     
-    //NSLog(@"VALUE: %@", [sortedArray description]);
+    [button setImage:[UIImage imageNamed:@"a_sorting-50"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(sortDescending)forControlEvents:UIControlEventTouchUpInside];
+    
+    self.tableData = [asc mutableCopy];
+    [self.tblLugares reloadData];
+}
+
+- (void) sortDescending{
+    
+    NSArray* desc = [self.tableData sortedArrayUsingComparator:^NSComparisonResult(CHPlaces* n1, CHPlaces* n2) {
+        return [[n2 rating] compare:[n1 rating]];
+    }];
+    
+    [button setImage:[UIImage imageNamed:@"d_sorting-50"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(sortAscending)forControlEvents:UIControlEventTouchUpInside];
+    
+    self.tableData = [desc mutableCopy];
+    [self.tblLugares reloadData];
 }
 
 
@@ -111,7 +105,7 @@
         self.tblLugares.hidden = NO;
         self.tableData = [[NSMutableArray alloc] init];
         self.tableData = placesList;
-       [self.tblLugares reloadData];
+        [self sortDescending];
     }
 
 }

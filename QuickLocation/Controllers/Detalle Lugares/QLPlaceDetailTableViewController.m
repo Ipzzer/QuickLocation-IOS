@@ -87,6 +87,11 @@
     if (detailsData) {
         cell.lblTelefono.text = [detailsData objectForKey:@"telefono"];
         cell.lblDireccion.text = [detailsData objectForKey:@"direccion"];
+        
+        if ([[detailsData objectForKey:@"estado"] rangeOfString:@"Cerrado"].location != NSNotFound) {
+            cell.lblEstado.textColor = [UIColor redColor];
+        }
+        
         cell.lblEstado.text = [detailsData objectForKey:@"estado"];
         cell.lblHorario.text = @"Horario";
         
@@ -130,6 +135,12 @@
                     NSString *estado = estadoValor == YES ?
                     @"Abierto en este momento" :
                     @"Cerrado en este momento" ;
+                    
+                    if (!horarios) {
+                        horarios = @[@"Dato no disponible"];
+                        estado = @"";
+                    }
+                    
                     
                     telefono = telefono ? telefono : @"No proporcionado";
                     direccion = direccion ? direccion : @"";
