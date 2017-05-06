@@ -215,7 +215,7 @@
     str = [str stringByAppendingString:lon];
     NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:
                             str, @"location",
-                            @"500", @"radius",
+                            @"distance", @"rankby",
                             GOOGLE_GEOPLACES, @"key",
                             self.locali, @"types",
                             nil];
