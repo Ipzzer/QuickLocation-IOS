@@ -191,6 +191,7 @@
         
         [self.imgPortada sd_setImageWithURL:[NSURL URLWithString:urlString]
                            placeholderImage:[UIImage imageNamed:@"default_img"]];
+        
     }else{
         self.imgPortada.image = [UIImage imageNamed:@"default_img"];
     }
@@ -225,7 +226,10 @@
                                            options:@{}
                                  completionHandler:nil];
     } else {
-        NSLog(@"Can't use comgooglemaps-x-callback:// on this device.");
+        NSString* directionsURL = [NSString stringWithFormat:@"http://maps.apple.com/?saddr=%@,%@&daddr=%@,%@",_currentLatitude, _currentLongitude, [self.detalleLugar latLugar], [self.detalleLugar lonLugar]];
+        
+        [[UIApplication sharedApplication] openURL: [NSURL URLWithString: directionsURL] options:@{} completionHandler:nil];
+        //NSLog(@"Can't use comgooglemaps-x-callback:// on this device.");
     }
 }
 

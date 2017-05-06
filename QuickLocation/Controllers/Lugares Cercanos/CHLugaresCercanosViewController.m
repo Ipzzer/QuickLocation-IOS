@@ -143,6 +143,8 @@
 {
     QLPlaceDetailTableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"placeDetailTableViewController"];
     vc.detalleLugar = [self.tableData objectAtIndex:indexPath.row];
+    vc.currentLatitude = _latitude;
+    vc.currentLongitude= _longitude;
     [self.navigationController pushViewController:vc animated:YES];
     
 }

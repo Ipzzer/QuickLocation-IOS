@@ -17,6 +17,9 @@
 @property (nonatomic, strong) HFStretchableTableHeaderView* stretchableTableHeaderView;
 @property (nonatomic, strong) CHPlaces *detalleLugar;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPortada;
+@property(strong,nonatomic) NSString *currentLatitude;
+@property(strong,nonatomic) NSString *currentLongitude;
+
 
 - (id) initWithPlace: (CHPlaces*) place;
 
