@@ -47,10 +47,17 @@
     
     button =  [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:[UIImage imageNamed:@"d_sorting-50"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(sortAscending)forControlEvents:UIControlEventTouchUpInside];
     [button setFrame:CGRectMake(0, 0, 30, 30)];
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     
-    self.navigationItem.rightBarButtonItem = barButton;
+    UIButton *orderByDistance =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [orderByDistance setImage:[UIImage imageNamed:@"distance_sort"] forState:UIControlStateNormal];
+    [orderByDistance addTarget:self action:@selector(sortByDefaultDistance)forControlEvents:UIControlEventTouchUpInside];
+    [orderByDistance setFrame:CGRectMake(0, 0, 30, 30)];
+    UIBarButtonItem *orderByDistanceBarButton = [[UIBarButtonItem alloc] initWithCustomView:orderByDistance];
+    
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects: orderByDistanceBarButton, barButton, nil];
 
     
 }
@@ -86,6 +93,11 @@
     [self.tblLugares reloadData];
 }
 
+- (void) sortByDefaultDistance{
+    
+    [self latitud:self.latitude longitud:self.longitude locali:self.locali];
+}
+
 
 - (id)initWithLatitud:(NSString *) lat
              Longitud:(NSString *) lon
@@ -105,7 +117,7 @@
         self.tblLugares.hidden = NO;
         self.tableData = [[NSMutableArray alloc] init];
         self.tableData = placesList;
-        [self sortDescending];
+        [self.tblLugares reloadData];
     }
 
 }

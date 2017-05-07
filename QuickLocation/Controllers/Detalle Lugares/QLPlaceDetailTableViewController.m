@@ -142,7 +142,7 @@
                     }
                     
                     
-                    telefono = telefono ? telefono : @"No proporcionado";
+                    telefono = telefono ? telefono : @"Dato no disponible";
                     direccion = direccion ? direccion : @"";
                     
                     detailsData = [[NSMutableDictionary alloc]

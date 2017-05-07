@@ -26,9 +26,9 @@
                                 <rect key="frame" x="0.0" y="64" width="207" height="209"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="police" translatesAutoresizingMaskIntoConstraints="NO" id="hWD-cb-wYZ">
-                                        <rect key="frame" x="40.666666666666657" y="44" width="127" height="122"/>
+                                        <rect key="frame" x="40.666666666666657" y="44" width="127" height="120"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="122" id="W2m-68-VWF"/>
+                                            <constraint firstAttribute="height" constant="120" id="W2m-68-VWF"/>
                                             <constraint firstAttribute="width" constant="127" id="dh4-nW-sAj"/>
                                         </constraints>
                                     </imageView>
@@ -55,26 +55,26 @@
                                     <constraint firstItem="X9e-Iq-prV" firstAttribute="top" secondItem="wBF-Lf-vqV" secondAttribute="top" id="9Xx-t3-SwP"/>
                                     <constraint firstAttribute="trailing" secondItem="BYj-3s-sRI" secondAttribute="trailing" constant="24" id="EDz-M3-vwp"/>
                                     <constraint firstItem="X9e-Iq-prV" firstAttribute="leading" secondItem="wBF-Lf-vqV" secondAttribute="leading" id="NuI-Rk-9eA"/>
-                                    <constraint firstItem="BYj-3s-sRI" firstAttribute="top" secondItem="hWD-cb-wYZ" secondAttribute="bottom" id="RP3-5s-c2R"/>
+                                    <constraint firstItem="BYj-3s-sRI" firstAttribute="top" secondItem="hWD-cb-wYZ" secondAttribute="bottom" constant="2" id="RP3-5s-c2R"/>
                                     <constraint firstAttribute="height" constant="209" id="bmj-tB-H03"/>
                                     <constraint firstItem="BYj-3s-sRI" firstAttribute="leading" secondItem="wBF-Lf-vqV" secondAttribute="leading" constant="24" id="d3D-eK-l6u"/>
                                     <constraint firstAttribute="bottom" secondItem="X9e-Iq-prV" secondAttribute="bottom" id="gfk-K2-Ddo"/>
                                     <constraint firstAttribute="trailing" secondItem="X9e-Iq-prV" secondAttribute="trailing" id="hWu-J0-z09"/>
-                                    <constraint firstItem="hWD-cb-wYZ" firstAttribute="centerY" secondItem="wBF-Lf-vqV" secondAttribute="centerY" id="zEG-Ts-z7v"/>
+                                    <constraint firstItem="hWD-cb-wYZ" firstAttribute="centerY" secondItem="wBF-Lf-vqV" secondAttribute="centerY" constant="-0.5" id="zEG-Ts-z7v"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z63-uU-xQC">
                                 <rect key="frame" x="207" y="64" width="207" height="209"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hospital" translatesAutoresizingMaskIntoConstraints="NO" id="41W-5J-rrR">
-                                        <rect key="frame" x="40.666666666666657" y="44" width="127.00000000000003" height="122"/>
+                                        <rect key="frame" x="40.666666666666657" y="44" width="127.00000000000003" height="120"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="122" id="lgU-HM-QhK"/>
+                                            <constraint firstAttribute="height" constant="120" id="lgU-HM-QhK"/>
                                             <constraint firstAttribute="width" constant="127" id="sCo-QD-AOg"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOSPITALES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlg-Wg-8vf">
-                                        <rect key="frame" x="24" y="166" width="159" height="21"/>
+                                        <rect key="frame" x="24" y="165" width="159" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="HkY-8Q-q6L"/>
                                         </constraints>
@@ -93,7 +93,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="xlg-Wg-8vf" secondAttribute="trailing" constant="24" id="3MK-cC-geU"/>
                                     <constraint firstAttribute="bottom" secondItem="NDI-YU-lUt" secondAttribute="bottom" id="5q3-vR-FqB"/>
-                                    <constraint firstItem="xlg-Wg-8vf" firstAttribute="top" secondItem="41W-5J-rrR" secondAttribute="bottom" id="6cV-IY-dde"/>
+                                    <constraint firstItem="xlg-Wg-8vf" firstAttribute="top" secondItem="41W-5J-rrR" secondAttribute="bottom" constant="1" id="6cV-IY-dde"/>
                                     <constraint firstItem="41W-5J-rrR" firstAttribute="centerY" secondItem="Z63-uU-xQC" secondAttribute="centerY" id="874-H0-4zr"/>
                                     <constraint firstItem="xlg-Wg-8vf" firstAttribute="leading" secondItem="Z63-uU-xQC" secondAttribute="leading" constant="24" id="R8g-lp-QsG"/>
                                     <constraint firstAttribute="trailing" secondItem="NDI-YU-lUt" secondAttribute="trailing" id="ZEs-9H-jSd"/>
@@ -107,14 +107,14 @@
                                 <rect key="frame" x="0.0" y="273" width="207" height="209"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fire_station" translatesAutoresizingMaskIntoConstraints="NO" id="JG8-Ul-EdE">
-                                        <rect key="frame" x="40.666666666666657" y="43" width="127" height="122"/>
+                                        <rect key="frame" x="40.666666666666657" y="43" width="127" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="127" id="bKD-6F-4vB"/>
-                                            <constraint firstAttribute="height" constant="122" id="h6S-je-Lwb"/>
+                                            <constraint firstAttribute="height" constant="120" id="h6S-je-Lwb"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOMBEROS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLa-LK-4EW">
-                                        <rect key="frame" x="24" y="165" width="159" height="20"/>
+                                        <rect key="frame" x="24" y="165.66666666666669" width="159" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="Ylh-TL-mFa"/>
                                         </constraints>
@@ -131,7 +131,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="JG8-Ul-EdE" firstAttribute="centerY" secondItem="mDT-c2-Rk2" secondAttribute="centerY" id="DAd-Xw-1Vu"/>
+                                    <constraint firstItem="JG8-Ul-EdE" firstAttribute="centerY" secondItem="mDT-c2-Rk2" secondAttribute="centerY" constant="-1.5" id="DAd-Xw-1Vu"/>
                                     <constraint firstAttribute="height" constant="209" id="Jyp-8B-iRH"/>
                                     <constraint firstItem="Nuu-KE-MH5" firstAttribute="leading" secondItem="mDT-c2-Rk2" secondAttribute="leading" id="W4p-o1-BQ5"/>
                                     <constraint firstAttribute="bottom" secondItem="Nuu-KE-MH5" secondAttribute="bottom" constant="1" id="WQK-W3-zg6"/>
@@ -139,7 +139,7 @@
                                     <constraint firstItem="Nuu-KE-MH5" firstAttribute="top" secondItem="mDT-c2-Rk2" secondAttribute="top" id="aj1-lC-3Wb"/>
                                     <constraint firstItem="JG8-Ul-EdE" firstAttribute="centerX" secondItem="mDT-c2-Rk2" secondAttribute="centerX" id="hwZ-UT-NIh"/>
                                     <constraint firstAttribute="trailing" secondItem="Nuu-KE-MH5" secondAttribute="trailing" id="piH-7v-sfA"/>
-                                    <constraint firstItem="vLa-LK-4EW" firstAttribute="top" secondItem="JG8-Ul-EdE" secondAttribute="bottom" id="qTQ-Qy-S11"/>
+                                    <constraint firstItem="vLa-LK-4EW" firstAttribute="top" secondItem="JG8-Ul-EdE" secondAttribute="bottom" constant="2.6666666666666856" id="qTQ-Qy-S11"/>
                                     <constraint firstItem="vLa-LK-4EW" firstAttribute="leading" secondItem="mDT-c2-Rk2" secondAttribute="leading" constant="24" id="r5D-do-K5S"/>
                                 </constraints>
                             </view>
@@ -147,14 +147,14 @@
                                 <rect key="frame" x="207" y="273" width="207" height="209"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pharmacy" translatesAutoresizingMaskIntoConstraints="NO" id="n34-FP-JyZ">
-                                        <rect key="frame" x="40.666666666666657" y="43.333333333333314" width="127.00000000000003" height="122"/>
+                                        <rect key="frame" x="40.666666666666664" y="43.333333333333329" width="127" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="127" id="cNH-9x-fS1"/>
-                                            <constraint firstAttribute="height" constant="122" id="moC-fO-bny"/>
+                                            <constraint firstAttribute="height" constant="120" id="moC-fO-bny"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FARMACIA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlJ-R9-5pg">
-                                        <rect key="frame" x="24" y="165.33333333333331" width="159" height="20"/>
+                                        <rect key="frame" x="24" y="165.66666666666669" width="159" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="yGq-ro-2Mj"/>
                                         </constraints>
@@ -173,10 +173,10 @@
                                 <constraints>
                                     <constraint firstItem="n34-FP-JyZ" firstAttribute="centerX" secondItem="Zqb-wN-cGd" secondAttribute="centerX" id="CQ2-LX-loJ"/>
                                     <constraint firstItem="PlJ-R9-5pg" firstAttribute="leading" secondItem="Zqb-wN-cGd" secondAttribute="leading" constant="24" id="CXH-I7-d2o"/>
-                                    <constraint firstItem="n34-FP-JyZ" firstAttribute="centerY" secondItem="Zqb-wN-cGd" secondAttribute="centerY" id="Msf-MY-hjM"/>
+                                    <constraint firstItem="n34-FP-JyZ" firstAttribute="centerY" secondItem="Zqb-wN-cGd" secondAttribute="centerY" constant="-1.1666666666666714" id="Msf-MY-hjM"/>
                                     <constraint firstItem="go3-4W-um5" firstAttribute="leading" secondItem="Zqb-wN-cGd" secondAttribute="leading" id="OZA-aT-J1o"/>
                                     <constraint firstAttribute="trailing" secondItem="PlJ-R9-5pg" secondAttribute="trailing" constant="24" id="Rbb-7z-Kat"/>
-                                    <constraint firstItem="PlJ-R9-5pg" firstAttribute="top" secondItem="n34-FP-JyZ" secondAttribute="bottom" id="WgR-lG-Hfk"/>
+                                    <constraint firstItem="PlJ-R9-5pg" firstAttribute="top" secondItem="n34-FP-JyZ" secondAttribute="bottom" constant="2.3333333333333712" id="WgR-lG-Hfk"/>
                                     <constraint firstAttribute="bottom" secondItem="go3-4W-um5" secondAttribute="bottom" id="hTT-xu-R08"/>
                                     <constraint firstAttribute="trailing" secondItem="go3-4W-um5" secondAttribute="trailing" id="pqJ-kG-FGp"/>
                                     <constraint firstAttribute="height" constant="209" id="rKW-fU-UxZ"/>
@@ -217,7 +217,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="reO-iS-o6M" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aaM-CU-d4m">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aaM-CU-d4m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -246,11 +246,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellIdentify" id="OcD-v1-hrj" customClass="CHLugaresCeldaTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellIdentify" id="OcD-v1-hrj" customClass="CHLugaresCeldaTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="414" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OcD-v1-hrj" id="1bG-ok-LFk">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="56.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzG-bf-RYi">
